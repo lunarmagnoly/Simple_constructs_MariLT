@@ -47,13 +47,13 @@ print("\n")
 #Nm x Mm using the Python calculator. Ask the user for N and M.
 
 #N-diamension of a rectangular piece of land
-N=float(input("Enter dimension N:"))
+N=float(input("Enter dimension N(m):"))
 #M-diamension of a rectangular piece of land
-M=float(input("Enter dimension M:"))
+M=float(input("Enter dimension M(m):"))
 from math  import *# to use sqrt
 #D-diagonal
 D=sqrt(N*N+M*M)
-print(f"Diametr is approximately {round(D,2)}.")
+print(f"Diametr is approximately {round(D,2)} meeters.")
 print("\n")
 
 #Task 6
