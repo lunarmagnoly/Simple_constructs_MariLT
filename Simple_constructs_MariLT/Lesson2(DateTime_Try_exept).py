@@ -39,25 +39,25 @@ from math import *
 
 # var1
 try:
-    R=float(inpit("Input R"))
+    R=float(input("Input R"))
     Sk=pi*R**2
     Lk=2*pi*R
     Skv=(2*R)**2
     Lkv=2*R*4
-    print(f"Ringi pindala on {Sk}\nRingi umbermoot om {LK}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}")
+    print(f"Ringi pindala on {Sk}\nRingi umbermoot om {Lk}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}")
 
 except:
     print("It has to be a number!")
 
-
+from random import *
 #var 2
 R=round(random()*100)# 0.0 ..... 1.0
 Sk=pi*R**2
 Lk=2*pi*R
 Skv=(2*R)**2
 Lkv=2*R*4
-print(f"Ringi pindala on {Sk}\nRingi umbermoot om {LK}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}"")
+print(f"Ringi pindala on {Sk}\nRingi umbermoot om {Lk}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}")
 
 
 
-#Task 2
+#Task 4
