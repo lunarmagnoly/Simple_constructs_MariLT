@@ -44,7 +44,7 @@ try:
     Lk=2*pi*R
     Skv=(2*R)**2
     Lkv=2*R*4
-    print(f"Ringi pindala on {Sk}\nRingi umbermoot om {LK}\nRuudu pindala on {Skv:}")
+    print(f"Ringi pindala on {Sk}\nRingi umbermoot om {LK}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}")
 
 except:
     print("It has to be a number!")
@@ -56,7 +56,7 @@ Sk=pi*R**2
 Lk=2*pi*R
 Skv=(2*R)**2
 Lkv=2*R*4
-print(f"Ringi pindala on {Sk}\nRingi umbermoot om {LK}\nRuudu pindala on {Skv:}")
+print(f"Ringi pindala on {Sk}\nRingi umbermoot om {LK}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}"")
 
 
 
