@@ -1,4 +1,7 @@
 #Task nr 1
+from ast import Try
+
+
 print("Hello, World!") # like // in java 1 line comment till the end of line
 '''like /*    .......    */ in java
 This is a multiline comment in Python.
@@ -7,10 +10,15 @@ It can span multiple lines.
 name= input("Enter your name:").capitalize() #.lower()-aaa, .upper()-AAA, .capitalize() - Aaa
 print("Welcome! Nice meeting you " , name)#adds space
 print("Welcome! Nice meeting you " + name)
-age= int(input("Enter your age: ")) 
-print("Welcome! Nice meeting you " + name + " You are ", age, "years old.") #same type data can be added by +, if different types , if u use \t or \n they have to be inside ""
-print(f"\tWelcome! \nNice meeting you {name}. You are  {age} years old.") 
-print("\n")
+try:
+    age= int(input("Enter your age: ")) 
+    print("Welcome! Nice meeting you " + name + " You are ", age, "years old.") #same type data can be added by +, if different types , if u use \t or \n they have to be inside ""
+    print(f"\tWelcome! \nNice meeting you {name}. You are  {age} years old.") 
+    print("\n")
+except:
+       print("Enter numbers") 
+
+
 
 #Task nr 2
 age=18
