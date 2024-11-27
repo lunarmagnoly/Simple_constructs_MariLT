@@ -56,8 +56,15 @@ Sk=pi*R**2
 Lk=2*pi*R
 Skv=(2*R)**2
 Lkv=2*R*4
-print(f"Ringi pindala on {Sk}\nRingi umbermoot om {Lk}\nRuudu pindala on {Skv:}\n Ruudu umbermoot on {Lkv}")
+print(f"Ringi pindala on {Sk}\nRingi umbermoot om {Lk}\nRuudu pindala on {Skv:}\nRuudu umbermoot on {Lkv}")
 
 
 
 #Task 4
+d=2.575 #coin d
+earth=6378#earth radius in km
+earth*=100000# earth radius in cm same as earth=earth*100000
+Learth=2*pi*earth
+num=Learth/d
+print(f"It takes {num} coins.\nWe would need {num*2} EUR")
+
