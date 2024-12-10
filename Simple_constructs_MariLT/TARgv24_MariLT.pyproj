@@ -26,6 +26,10 @@
     <Compile Include="Lesson3%28if%29.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="task10.block-scheme.jpeg" />
+    <Content Include="task9.block-scheme.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
