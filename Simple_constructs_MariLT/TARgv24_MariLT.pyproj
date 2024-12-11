@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Independent study.py</StartupFile>
+    <StartupFile>Lesson 4(while, for).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Lesson 4%28while, for%29.py" />
     <Compile Include="Lesson2%28DateTime_Try_exept%29.py" />
     <Compile Include="Lesson3%28if%29.py" />
     <Compile Include="Independent study.py" />
