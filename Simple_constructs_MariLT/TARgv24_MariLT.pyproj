@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>If, While, for HW.py</StartupFile>
+    <StartupFile>Lesson5(lists and functions).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,6 +27,7 @@
     <Compile Include="Lesson2%28DateTime_Try_exept%29.py" />
     <Compile Include="Lesson3%28if%29.py" />
     <Compile Include="Independent study.py" />
+    <Compile Include="Lesson5%28lists and functions%29.py" />
     <Compile Include="Math_practice.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
     <Compile Include="Vigade_parandus_2_teoreem.py" />
