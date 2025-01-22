@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Isikukood.py</StartupFile>
+    <StartupFile>Lesson7(def).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -29,6 +29,8 @@
     <Compile Include="Lesson3%28if%29.py" />
     <Compile Include="Independent study.py" />
     <Compile Include="Lesson5%28lists and functions%29.py" />
+    <Compile Include="Lesson7%28def%29.py" />
+    <Compile Include="L7Mod.py" />
     <Compile Include="Math_practice.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
     <Compile Include="Vigade_parandus_2_teoreem.py" />
