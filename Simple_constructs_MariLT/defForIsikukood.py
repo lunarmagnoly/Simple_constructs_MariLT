@@ -4,7 +4,17 @@ def isikukoodPikkusTrue(isikukood: str)->bool:
     :param isikukood: Личный код (должен быть строкой из 11 цифр).
     :rtype: bool 
     """
-    return len(isikukood) == 11 and isikukood.isdigit()
+    return len(isikukood) == 11 and isikukoodIsDigit(isikukood)
+
+def isikukoodIsDigit(isikukood: str)->bool:
+    """
+    Проверяет, что  isikukood числовое значение
+    :param isikukood: Личный код (должен быть строкой из 11 цифр).
+    :rtype: bool 
+    """
+    return isikukood.isdigit()
+
+
 
 def isikukoodiEsimeneNumber(isikukood: str)->bool:
     """
@@ -84,12 +94,8 @@ def valeIsikukoodNimikirja(isikukood: str, arvud: list) -> list:
     :rtype: list. Обновленный список arvud.
     """
     # Проверяем, проходит ли код все проверки
-    if (not isikukoodKontrollNumber(isikukood) or
-        not onKuupaev(isikukood) or
-        not isikukoodiEsimeneNumber(isikukood) or
-        not isikukoodPikkusTrue(isikukood)):
-        arvud.append(isikukood)  # Добавляем неверный код в список
-
+    if valeIsikukood(isikukood):
+        arvud.append(isikukood)
     return arvud
 
 def getYear(isikukood: str) -> int:
@@ -134,9 +140,9 @@ def getGender(isikukood: str) -> str:
     Определяет пол на основе первой цифры личного кода.
 
     :param isikukood: Личный код (строка из 11 цифр).
-    :return: "мужчина", если первая цифра 1, 3, 5 или 7, иначе "женщина".
+    :return: "mees", если первая цифра 1, 3, 5 или 7, иначе "женщина".
     """
-    return "мужчина" if isikukood[0] in '1357' else "женщина"
+    return "mees" if isikukood[0] in '1357' else "naine"
     
 def getSunnikoht(isikukood: str) -> str:
     """
@@ -179,7 +185,7 @@ def getSunnikoht(isikukood: str) -> str:
         else:
             place_of_birth = "Lõuna-Eesti Haigla (Võru), Põlva Haigla"
     else:
-        place_of_birth = "не установлено"
+        place_of_birth = "ei ole teadav"
     return place_of_birth
 
 def korrektneIsikukoodNimikirja(isikukood: str, ikoodid: list) -> list:
@@ -191,10 +197,37 @@ def korrektneIsikukoodNimikirja(isikukood: str, ikoodid: list) -> list:
     :return: Обновленный список ikoodid.
     """
     # Проверяем, проходит ли код все проверки
-    if (isikukoodKontrollNumber(isikukood) and
-        onKuupaev(isikukood) and
-        isikukoodiEsimeneNumber(isikukood) and
-        isikukoodPikkusTrue(isikukood)):
+    if korrektneIsikukood(isikukood):
         ikoodid.append(isikukood)  # Добавляем верный код в список
 
     return ikoodid
+
+def korrektneIsikukood(isikukood: str) -> bool:
+    """
+    Проверяем верный ли личный код.
+
+    :param isikukood: Личный код (строка из 11 цифр).
+    :return: bool
+    """
+    # Проверяем, проходит ли код все проверки
+    return (isikukoodKontrollNumber(isikukood) and
+            onKuupaev(isikukood) and
+            isikukoodiEsimeneNumber(isikukood) and
+            isikukoodPikkusTrue(isikukood))
+       
+def valeIsikukood(isikukood: str) -> bool:
+    """
+    Добавляет неверный личный код в список arvud, если он не проходит проверки.
+
+    :param isikukood: Личный код (строка из 11 цифр).
+    :param arvud: Список для записи неверных кодов.
+    :rtype: list. Обновленный список arvud.
+    """
+    # Проверяем, проходит ли код все проверки
+    return (not isikukoodKontrollNumber(isikukood) or
+        not onKuupaev(isikukood) or
+        not isikukoodiEsimeneNumber(isikukood) or
+        not isikukoodPikkusTrue(isikukood))
+        
+
+     
