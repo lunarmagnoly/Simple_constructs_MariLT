@@ -60,6 +60,7 @@ while True:
     date_of_birth = f"{id_code[5:7]}.{id_code[3:5]}.{year}"
 
     hospital_code = int(id_code[7:10])
+
     place_of_birth = None
     if year < 2013:
         if 1 <= hospital_code <= 10:
