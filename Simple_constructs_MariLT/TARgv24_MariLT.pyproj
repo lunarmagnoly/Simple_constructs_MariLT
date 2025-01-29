@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>isikukoodWithDef.py</StartupFile>
+    <StartupFile>Iseseisevtöö_Registreerimine ja autoriseerimine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="defForIsikukood.py" />
     <Compile Include="If, While, for HW.py" />
+    <Compile Include="Iseseisevtöö_Registreerimine ja autoriseerimine.py" />
     <Compile Include="Isikukood.py" />
     <Compile Include="isikukoodWithDef.py" />
     <Compile Include="Lesson 4%28while, for%29.py" />
@@ -34,6 +35,7 @@
     <Compile Include="Lesson7%28def%29.py" />
     <Compile Include="L7Mod.py" />
     <Compile Include="Math_practice.py" />
+    <Compile Include="MyModule.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
     <Compile Include="Vigade_parandus_2_teoreem.py" />
   </ItemGroup>
