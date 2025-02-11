@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Iseseisevtöö_Registreerimine ja autoriseerimine.py</StartupFile>
+    <StartupFile>too_failidega.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -37,12 +37,16 @@
     <Compile Include="Math_practice.py" />
     <Compile Include="MyModule.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
+    <Compile Include="too_failidega.py" />
+    <Compile Include="interview_module.py" />
     <Compile Include="Vigade_parandus_2_teoreem.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="vastuvõetud.txt" />
     <Content Include="skeem v3_2.jpeg" />
     <Content Include="task10.block-scheme.jpeg" />
     <Content Include="task9.block-scheme.jpeg" />
+    <Content Include="kusimused_vastused.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

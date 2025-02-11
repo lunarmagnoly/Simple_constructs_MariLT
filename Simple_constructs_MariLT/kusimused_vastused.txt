@@ -1,0 +1,5 @@
+Mis on Python?:programmeerimiskeel
+Mis on HTML?:märgistuskeel
+Mis on SQL?:andmebaasikeel
+Mis on API?:liides
+Mis on Git?:versioonihaldus
