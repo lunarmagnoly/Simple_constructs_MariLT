@@ -35,6 +35,7 @@ while True:
                         if parooliKontroll(parool):
                             registreerimine(nimi, parool, kasutajad_file, paroolid_file)
                             print("\nRegistreerimine on õnnestunud.\n")
+                            saada_kiri(nimi, parool)  # Email is sent only if registration is successful
                             break
                         else:
                             print("\nParool peab sisaldama vähemalt 8 sümbolit, sealhulgas numbrid, suured ja väiksed tähed ja spetsiaalset sümbolit.\n")
@@ -43,6 +44,7 @@ while True:
                     registreerimine(nimi, parool, kasutajad_file, paroolid_file)
                     print(f"\nTeie automaatselt genereeritud parool: {parool}")
                     print("\nRegistreerimine on õnnestunud.\n")
+                    saada_kiri(nimi, parool)  # Email is sent only if registration is successful
                 else:
                     print("Vale valik. Palun valige uuesti.")
             except ValueError:

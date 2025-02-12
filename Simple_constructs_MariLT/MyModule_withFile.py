@@ -1,6 +1,8 @@
-﻿import re
+﻿from email.message import EmailMessage
+import re
 import random
 import string
+import smtplib, ssl
 
 def nimiKontroll(nimi: str, kasutajad: str) -> bool:
     """
@@ -30,6 +32,7 @@ def registreerimine(nimi: str, parool: str, kasutajad: str, paroolid: str) -> No
             kasutajad_file.write(nimi + '\n')
         with open(paroolid, 'a', encoding='utf-8') as paroolid_file:
             paroolid_file.write(parool + '\n')
+        saada_kiri(nimi, parool)
     except FileNotFoundError:
         print(f"Один из файлов {kasutajad} или {paroolid} не найден.")
 
@@ -39,7 +42,7 @@ def autoriseerimine(nimi: str, parool: str, kasutajad: str, paroolid: str) -> bo
     :param nimi: Строка с именем.
     :param parool: Строка с паролем.
     :param kasutajad: Файл с именами пользователей.
-    :param paroolid: Файл с паролями пользователей.
+    :param paroolид: Файл с паролями пользователей.
     :return: True, если авторизация успешна, иначе False.
     """
     try:
@@ -59,7 +62,7 @@ def unustanudParooliTaastamine(nimi: str, uus_parool: str, kasutajad: str, paroo
     :param nimi: Строка с именем.
     :param uus_parool: Строка с новым паролем.
     :param kasutajad: Файл с именами пользователей.
-    :param paroolid: Файл с паролями пользователей.
+    :param paroolид: Файл с паролями пользователей.
     :return: True, если пароль успешно обновлён, иначе False.
     """
     if not nimiKontroll(nimi, kasutajad):
@@ -107,3 +110,33 @@ def salasona(pikkus: int) -> str:
     """
     tähed = string.ascii_letters + string.digits + "!@#$%^&*()"
     return ''.join(random.choice(tähed) for _ in range(pikkus))
+
+def saada_kiri(nimi: str, parool: str):
+    """
+    Отправляет электронное письмо с информацией о регистрации.
+    :param nimi: Имя пользователя.
+    :param parool: Пароль пользователя.
+    """
+    kellele = input("Kellele: ")
+    kiri = f"Sa oled registreeritud. Sinu kasutajanimi on {nimi}, sinu salasona on {parool}"
+    smtp_server = "smtp.gmail.com"
+    port = 587
+    sender_email = "mary.luna.tey@gmail.com"
+    password = input("Enter app password: ")
+    context = ssl.create_default_context()
+    msg = EmailMessage()
+    msg.set_content(kiri)
+    msg['Subject'] = "E-kiri saatmine"
+    msg['From'] = "Mari"
+    msg['To'] = kellele
+    
+    try:
+        server = smtplib.SMTP(smtp_server, port)
+        server.starttls(context=context)
+        server.login(sender_email, password)
+        server.send_message(msg)
+        print("Informatsioon: Kiri oli saadetud")
+    except Exception as e:
+        print("Tekkis viga!", e)
+    finally:
+        server.quit()
