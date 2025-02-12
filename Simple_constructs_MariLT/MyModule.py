@@ -21,6 +21,7 @@ def registreerimine(nimi: str, parool: str, kasutajad: list, paroolid: list) -> 
     :param kasutajad: Список с именами пользователей.
     :param paroolid: Список с паролями пользователей.
     """
+
     kasutajad.append(nimi)
     paroolid.append(parool)
 
@@ -37,7 +38,7 @@ def autoriseerimine(nimi: str, parool: str, kasutajad: list, paroolid: list) -> 
     if nimi in kasutajad:
         index = kasutajad.index(nimi)
         return paroolid[index] == parool
-    return False
+    return False#точно ли нужен? проверить
 
 def unustanudParooliTaastamine(nimi: str, uus_parool: str, kasutajad: list, paroolid: list) -> bool:
     """

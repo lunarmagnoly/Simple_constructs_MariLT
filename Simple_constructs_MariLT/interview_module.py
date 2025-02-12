@@ -58,7 +58,7 @@ def save_results(vastuvõetud, eisobi):
         for name, score in eisobi:
             file.write(f"{name}: {score}\n")
 
-# Вывод результатов в Shell
+# Вывод результатов 
 def print_results():
     print("Vastuvõetud kandidaadid:")
     with open('vastuvõetud.txt', 'r', encoding='utf-8') as file:

@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>too_failidega.py</StartupFile>
+    <StartupFile>registreerimine ja autoriseerimine too failiga.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -36,12 +36,16 @@
     <Compile Include="L7Mod.py" />
     <Compile Include="Math_practice.py" />
     <Compile Include="MyModule.py" />
+    <Compile Include="MyModule_withFile.py" />
+    <Compile Include="registreerimine ja autoriseerimine too failiga.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
     <Compile Include="too_failidega.py" />
     <Compile Include="interview_module.py" />
     <Compile Include="Vigade_parandus_2_teoreem.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="kasutajad.txt" />
+    <Content Include="paroolid.txt" />
     <Content Include="vastuvõetud.txt" />
     <Content Include="skeem v3_2.jpeg" />
     <Content Include="task10.block-scheme.jpeg" />
