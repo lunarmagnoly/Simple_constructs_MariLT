@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Euroopa_riigid.py</StartupFile>
+    <StartupFile>Ruutvorrand_pack.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -40,6 +40,7 @@
     <Compile Include="MyModule.py" />
     <Compile Include="MyModule_withFile.py" />
     <Compile Include="registreerimine ja autoriseerimine too failiga.py" />
+    <Compile Include="Ruutvorrand_pack.py" />
     <Compile Include="Simple_constructs_MariLT.py" />
     <Compile Include="too_failidega.py" />
     <Compile Include="interview_module.py" />
