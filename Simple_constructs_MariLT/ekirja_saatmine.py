@@ -127,13 +127,13 @@ def aken_grid():
     kiri_box = Text(canvas, font=("Arial", 16), width=45, height=7, highlightthickness=0, bd=1, bg="white")
     canvas.create_window(130, 300, anchor="nw", window=kiri_box)
 
-    btn_lisa_pilt = Button(canvas, text="Lisa Pilt", font=("Arial", 16), fg="white", bg="#74a490", bd=0, command=vali_pilt)
+    btn_lisa_pilt = Button(canvas, text="Lisa", font=("Arial", 16), fg="white", bg="#74a490", bd=0, command=vali_pilt, width=7)
     canvas.create_window(260, 210, anchor="nw", window=btn_lisa_pilt)
 
     l_lisatud = ttk.Label(canvas, text="Ühtegi faili pole lisatud", font=("Arial", 16), foreground="#fa3e40", style='Transparent.TLabel',width=26)
     canvas.create_window(357, 215, anchor="nw", window=l_lisatud)
 
-    btn_saada_kiri = Button(canvas, text="Saada Kiri", font=("Arial", 16), fg="white", bg="#74a490", bd=0, command=saada_kiri)
+    btn_saada_kiri = Button(canvas, text="Saada Kiri", font=("Arial", 16), fg="white", bg="#74a490", bd=0, command=saada_kiri, width=10)
     canvas.create_window(339, 490, anchor="nw", window=btn_saada_kiri)
 
     
