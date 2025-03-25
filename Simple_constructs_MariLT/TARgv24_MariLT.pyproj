@@ -5,7 +5,7 @@
     <ProjectGuid>a5b446ee-3d10-4934-9555-a3ca9747ff6f</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Ruutvorrand_pack.py</StartupFile>
+    <StartupFile>ekirja_saatmine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,12 +24,14 @@
   <ItemGroup>
     <Compile Include="defForIsikukood.py" />
     <Compile Include="dictionary_functions.py" />
+    <Compile Include="ekirja_saatmine.py" />
     <Compile Include="Euroopa_riigid.py" />
-    <Compile Include="If, While, for HW.py" />
+    <Compile Include="If, While,forHW.py" />
     <Compile Include="Iseseisevtöö_Registreerimine ja autoriseerimine.py" />
     <Compile Include="Isikukood.py" />
     <Compile Include="isikukoodWithDef.py" />
     <Compile Include="Lesson 4%28while, for%29.py" />
+    <Compile Include="Lesson12%28SQLite%29.py" />
     <Compile Include="Lesson2%28DateTime_Try_exept%29.py" />
     <Compile Include="Lesson3%28if%29.py" />
     <Compile Include="Independent study.py" />
@@ -47,14 +49,22 @@
     <Compile Include="Vigade_parandus_2_teoreem.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="carton.jpg" />
+    <Content Include="fabiano_texture.jpg" />
     <Content Include="kasutajad.txt" />
+    <Content Include="letter.jpg" />
+    <Content Include="papirus.jpg" />
     <Content Include="paroolid.txt" />
     <Content Include="countries_and_capitals.txt" />
+    <Content Include="texture.jpg" />
     <Content Include="vastuvõetud.txt" />
     <Content Include="skeem v3_2.jpeg" />
     <Content Include="task10.block-scheme.jpeg" />
     <Content Include="task9.block-scheme.jpeg" />
     <Content Include="kusimused_vastused.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppData\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
