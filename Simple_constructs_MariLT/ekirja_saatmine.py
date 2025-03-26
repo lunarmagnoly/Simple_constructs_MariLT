@@ -1,13 +1,13 @@
 import os
+import re
 import ssl
 import smtplib
 import imghdr
-from tkinter import *
-from tkinter import filedialog, messagebox, simpledialog
 from email.message import EmailMessage
-from turtle import width
+
+from tkinter import *
+from tkinter import filedialog, messagebox, simpledialog, ttk
 from PIL import Image, ImageTk
-from tkinter import ttk
 
 # Глобальная переменная для хранения пути к файлу
 file = None
@@ -34,19 +34,27 @@ def vali_pilt():
     return file
 
 
+def validate_email(email):
+    pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    return re.match(pattern, email)
+
 def saada_kiri():
     try:
         kellele = entry_email.get()
         teema = entry_teema.get()
         kiri = kiri_box.get("1.0", END)
 
+        # Проверка email перед отправкой
+        if not validate_email(kellele):
+            messagebox.showerror("Viga", "Sisestatud e-mail ei ole korrektne!")
+            return
         smtp_server = "smtp.gmail.com"
         port = 587
         sender_email = "mary.luna.tey@gmail.com"
 
-        password = simpledialog.askstring("App Password", "Enter your email app password:", show="*")
+        password = simpledialog.askstring("App salasõna", "Sisestage Teie eposti app salasõna:", show="*")
         if not password:
-            messagebox.showwarning("Warning", "No password entered.")
+            messagebox.showwarning("Viga", "Salasõna ei ole sisestatud.")
             return
 
         context = ssl.create_default_context()
@@ -70,16 +78,20 @@ def saada_kiri():
         messagebox.showinfo("Informatsioon", "Kiri oli saadetud")
 
         # Очистка полей после успешной отправки
-        entry_email.delete(0, END)
-        entry_teema.delete(0, END)
-        kiri_box.delete("1.0", END)
-        # Очистка строки состояния (метка l_lisatud)
-        l_lisatud.configure(text="Ühtegi faili pole lisatud")
+        tyhista()
 
         
 
     except Exception as e:
         messagebox.showerror("Tekkis viga!", str(e))
+
+def tyhista():
+    """Очищает все поля ввода и сбрасывает статус загруженного файла."""
+    entry_email.delete(0, END)
+    entry_teema.delete(0, END)
+    kiri_box.delete("1.0", END)
+    l_lisatud.configure(text="Ühtegi faili pole lisatud")
+
 
 def aken_grid():
     global entry_email, entry_teema, kiri_box, l_lisatud
@@ -135,7 +147,9 @@ def aken_grid():
 
     btn_saada_kiri = Button(canvas, text="Saada Kiri", font=("Arial", 16), fg="white", bg="#74a490", bd=0, command=saada_kiri, width=10)
     canvas.create_window(339, 490, anchor="nw", window=btn_saada_kiri)
-
+    
+    btn_tyhista = Button(canvas, text="Puhasta", font=("Arial", 16), fg="white", bg="#74a490", bd=0, command=tyhista, width=10)
+    canvas.create_window(130, 490, anchor="nw", window=btn_tyhista)
     
 
     aken.mainloop()
